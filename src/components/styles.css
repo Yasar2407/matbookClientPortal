@@ -1,0 +1,326 @@
+/* styles.css */
+
+/* General Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  background-color: #f9fafb;
+  padding: 2rem 1rem;
+  margin-left: 50px;
+  width: 93%;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.header-subtitle {
+  margin-top: 0.5rem;
+  color: #6b7280;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.tab-button {
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(214, 214, 214);
+  border: none;
+  font-size: 1rem;
+  color: #6b7280;
+  cursor: pointer;
+  border-bottom: 2px ;
+  transition: color 0.3s ease;
+  width: 50%;
+}
+
+.tab-button.active {
+  background-color: #ffffff;
+  border-color: rgb(214, 214, 214);
+  color: #000;
+}
+
+.upload-button {
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: #e5e5e5;
+  cursor: pointer;
+  color: #000;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+  background-color: #6b7280;
+  color: white;
+}
+
+.image-preview {
+  margin-top: 10px;
+  max-width: 200px;
+}
+
+.image-preview img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 89%;
+  margin-left: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+   color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.card-image {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* This ensures 5 cards per row */
+  gap: 1.5rem;
+  width: 95%;
+  margin: 20px auto;
+}
+
+/* Product Card */
+.card-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #333;
+  text-align: center;
+}
+
+/* Product Image */
+.card-product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Product Title and Details */
+.card-product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+   color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.card-product-details {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+/* Specs List */
+.card-specs-list {
+  list-style: none;
+  padding: 0;
+  color: #6b7280;
+}
+
+/* Quote Section */
+.quote-description {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.quote-button {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: black;
+  border-bottom-color: #9ca3af;
+  border-color: #9ca3af;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.quote-button:hover {
+  background-color: rgb(214, 214, 214);
+  border-color: black;
+}
+
+/* Container for search and tags */
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #000;
+  margin-left: 50px;
+  margin-bottom: 1.5rem;
+  width: 93%;
+  position: relative;
+}
+
+/* Input container with icon */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #888;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 8px 12px 8px 35px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+/* Tags container */
+.filter-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+/* Individual tags */
+.filter-tag {
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.filter-tag.active {
+  background-color: #333;
+  color: white;
+}
+
+
+/* Grid Layout for 5 cards per row */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+  gap: 1.2rem;
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  background-color: #f9fafb;
+}
+
+/* Card Styling */
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Image Styling */
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: -12px;
+}
+
+/* Information Section */
+.product-info {
+  padding: 8px 14px; /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -4px;
+}
+
+/* Title */
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: -4px; /* Reduced gap */
+}
+
+/* Details */
+.product-details {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 2px; /* Reduced gap */
+}
+
+/* Brand and MSRP */
+.product-meta {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.product-meta span {
+  display: block;
+  margin-bottom: 1px;
+}
+
+footer {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.text-sm {
+  color: #6b7280;
+}
