@@ -40,6 +40,10 @@ export const getClientProfile = createAsyncThunk(
   }
 );
 
+export const logout = createAsyncThunk("auth/logout", async () => {
+  await SignInAPI.logout();
+});
+
 const initialState = user   
 ? { isLoggedIn: true,user,profile: null,cusprofile:null,}
 : { isLoggedIn: false, user: null, profile: null,cusprofile:null,};
@@ -56,6 +60,10 @@ const authSlice = createSlice({
     .addCase(getClientProfile.fulfilled, (state, action) => {
       console.log("✅ Client profile received:", action.payload);
       state.cusprofile = action.payload; 
+    })
+    .addCase(logout.fulfilled, (state) => {
+      state.isLoggedIn = false;
+      state.user = null;
     })
   }
 })
